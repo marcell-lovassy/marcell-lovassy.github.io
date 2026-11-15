@@ -1,57 +1,606 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marcell Lovassy - Indie Game Developer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcell Lovassy — Unity Gameplay &amp; Tools Programmer</title>
+  <meta name="description" content="Senior game developer from Budapest. Gameplay programming and in-engine tooling in Unity, with credits on Bloom &amp; Breakfast and Rob and Renovate.">
+  <meta name="author" content="Marcell Lovassy">
+  <meta name="theme-color" content="#0c0e0d">
+  <link rel="canonical" href="https://marcell-lovassy.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Marcell Lovassy — Unity Gameplay &amp; Tools Programmer">
+  <meta property="og:description" content="Senior game developer from Budapest. Gameplay programming and in-engine tooling in Unity.">
+  <meta property="og:url" content="https://marcell-lovassy.github.io/">
+  <meta property="og:image" content="https://marcell-lovassy.github.io/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marcell Lovassy",
+    "jobTitle": "Game Developer",
+    "url": "https://marcell-lovassy.github.io/",
+    "sameAs": ["https://github.com/marcell-lovassy"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Budapest", "addressCountry": "HU" },
+    "knowsAbout": ["Unity", "C#", "Gameplay programming", "Game development tools", "Unreal Engine", ".NET"]
+  }
+  </script>
 </head>
 <body>
-  <h1>Marcell Lovassy</h1>
-  <p>Indie game developer creating unique strategy and adventure games for mobile.</p>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:marcell.loassy@gmail.com">marcell.lovassy@gmail.com</a></p>
+<!-- Icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 6 8-6"/></symbol>
+  <symbol id="i-github" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a.6.6 0 0 0 .92.5l10.2-6.5a.6.6 0 0 0 0-1L8.92 5a.6.6 0 0 0-.92.5Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6.5" y="5" width="4" height="14" rx="1"/><rect x="13.5" y="5" width="4" height="14" rx="1"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 5-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 5 7 7-7 7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V4h10v5M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="6" rx="1"/></symbol>
+</svg>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>
-      <strong>The One Cheese</strong> – a roguelike adventure with mice and cats.<br>
-      <a href="https://marcell-lovassy.github.io/theonecheese/privacypolicy/">Privacy Policy</a>
-      <a href="https://marcell-lovassy.github.io/theonecheese/termsandconditions/">Terms & Conditions</a>
-      <!-- You can add: <a href=".../termsofservice/">Terms of Service</a> -->
-    </li>
-    <!-- Add more projects here -->
-  </ul>
+<a class="skip" href="#main">Skip to content</a>
 
-  <footer>
-    © 2025 Marcell Lovassy
-  </footer>
+<nav class="nav" aria-label="Primary">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Marcell Lovassy, back to top">
+      <span class="nav__mark" aria-hidden="true">ML</span>
+      <span class="nav__name">Marcell Lovassy</span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#springdale">Springdale</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a class="nav__cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__media" aria-hidden="true">
+    <img src="assets/img/springdale/hero-roadblock.webp" alt="" width="1920" height="1080" fetchpriority="high">
+  </div>
+
+  <div class="container hero__inner">
+    <p class="eyebrow">
+      <span>Gameplay &amp; Tools Programmer</span>
+      <span class="eyebrow__sep" aria-hidden="true">/</span>
+      <span>Unity</span>
+      <span class="eyebrow__sep" aria-hidden="true">/</span>
+      <span>Budapest</span>
+    </p>
+    <h1 class="hero__name">Marcell <br>Lovassy</h1>
+    <p class="hero__lead">
+      Senior game developer with over a decade in software engineering. I build gameplay systems
+      and the in-engine tools that keep a team moving, most recently on
+      <strong>Bloom&nbsp;&amp;&nbsp;Breakfast</strong> at Fortis Games and before that on
+      <strong>Rob and Renovate</strong> at Gameloft.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="mailto:marcell.lovassy@gmail.com">
+        <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Get in touch
+      </a>
+      <a class="btn btn--ghost" href="#springdale">
+        See my current project<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg>
+      </a>
+    </div>
+
+    <dl class="stats">
+      <div><dt>10+ yrs</dt><dd>Software engineering</dd></div>
+      <div><dt>6 yrs</dt><dd>Game development</dd></div>
+      <div><dt>4 yrs</dt><dd>Remote, US-based studio</dd></div>
+    </dl>
+  </div>
+
+  <a class="hero__credit" href="#springdale">Pre-alpha in-engine capture from Springdale, my solo project</a>
+</header>
+
+<section class="credits" aria-label="Games I have worked on">
+  <div class="container credits__inner">
+    <p class="credits__label">Worked on</p>
+    <div class="credit">
+      <strong>Bloom &amp; Breakfast</strong>
+      <span>Fortis Games · Mobile</span>
+    </div>
+    <div class="credit">
+      <strong>Rob and Renovate</strong>
+      <span>Gameloft · Mobile</span>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+  <!-- ============ About ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker"><b>01</b> About</p>
+        <h2>Gameplay systems, and the tools behind them.</h2>
+      </div>
+
+      <div class="about">
+        <div class="prose reveal">
+          <p>
+            I'm a game developer from Hungary, based in Budapest, with a BSc in Computer Science and
+            more than ten years of software engineering behind me. I started in enterprise software,
+            spending five years as a .NET developer at Siemens (evosoft), then moved into games at
+            <strong>Gameloft</strong>, where I worked in Unity on Rob and Renovate.
+          </p>
+          <p>
+            After that I spent four years working remotely for <strong>Fortis Games</strong>,
+            a US-based studio, on Bloom &amp; Breakfast.
+          </p>
+          <p>
+            My main areas are <strong>gameplay programming</strong> and <strong>in-engine tooling</strong>:
+            the systems players touch, and the editor tools that let designers and artists work without
+            waiting on a programmer. When a project needs it, I'm comfortable on the server and backend side too.
+          </p>
+          <p>
+            Outside of work I'm always building something. Right now that's
+            <a href="#springdale">Springdale</a>, a solo first-person thriller in pre-alpha, alongside
+            a few smaller games and tools.
+          </p>
+        </div>
+
+        <dl class="facts reveal">
+          <div><dt>Based in</dt><dd>Budapest, Hungary</dd></div>
+          <div><dt>Focus</dt><dd>Gameplay programming, in-engine tooling</dd></div>
+          <div><dt>Engines</dt><dd>Unity (primary), Unreal Engine</dd></div>
+          <div><dt>Platforms</dt><dd>Mobile, PC, console</dd></div>
+          <div><dt>Remote</dt><dd>4 years with a US-based team</dd></div>
+          <div><dt>Education</dt><dd>BSc, Computer Science</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Experience ============ -->
+  <section class="section section--tight-top" id="experience">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker"><b>02</b> Experience</p>
+        <h2>A decade in software, six years in games.</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__span">4 years</p>
+            <p class="job__where"><span>Remote</span><span>US-based studio</span></p>
+          </div>
+          <div class="job__body">
+            <h3 class="job__company">Fortis Games</h3>
+            <p class="job__role">Senior Game Developer · Unity</p>
+            <p class="job__desc">
+              Worked remotely on Bloom &amp; Breakfast as part of a distributed, US-based team.
+              Gameplay programming and in-engine tooling, with server-side work when the project needed it.
+            </p>
+            <ul class="titles">
+              <li class="title-card"><strong>Bloom &amp; Breakfast</strong><span>Mobile · Midcore / casual</span></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__span">~2 years</p>
+            <p class="job__where">Game studio</p>
+          </div>
+          <div class="job__body">
+            <h3 class="job__company">Gameloft</h3>
+            <p class="job__role">Unity Developer</p>
+            <p class="job__desc">
+              My move from enterprise software into games: Unity development on Rob and Renovate,
+              a casual mobile title.
+            </p>
+            <ul class="titles">
+              <li class="title-card"><strong>Rob and Renovate</strong><span>Mobile · Casual</span></li>
+            </ul>
+            <p class="job__note">
+              My team also helped with finishing polish on Disney Dreamlight Valley. We were not part of its core team.
+            </p>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__span">5 years</p>
+            <p class="job__where">Enterprise software</p>
+          </div>
+          <div class="job__body">
+            <h3 class="job__company">Siemens <span class="job__aka">evosoft</span></h3>
+            <p class="job__role">.NET Developer</p>
+            <p class="job__desc">
+              Five years as a .NET developer, where I built my foundation as a software engineer
+              before moving into games.
+            </p>
+          </div>
+        </li>
+
+        <li class="job job--edu reveal">
+          <div class="job__meta">
+            <p class="job__span">Education</p>
+          </div>
+          <div class="job__body">
+            <h3 class="job__company">BSc in Computer Science</h3>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Springdale ============ -->
+  <section class="section feature" id="springdale">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker"><b>03</b> Featured project</p>
+        <h2>Springdale</h2>
+        <p class="section__sub"><span class="badge">Pre-alpha</span><span>Solo project · Working title</span></p>
+      </div>
+
+      <div class="feature__intro">
+        <div class="prose reveal">
+          <p>
+            Springdale is my current solo project, now in <strong>pre-alpha</strong>: a <strong>first-person mystery thriller</strong> set in an
+            alternate early-1990s America. An engineer goes looking for his wife in a small mountain town
+            that has quietly closed its roads to outsiders, and where everyone enforcing the closure
+            seems to think that is perfectly normal.
+          </p>
+          <p>
+            You play a capable engineer, not a soldier. The loop is explore, investigate, understand,
+            improvise, overcome: problems are solved with ingenuity before force, and the mood is carried
+            by place, lighting and sound.
+          </p>
+          <ul class="tags tags--lg" aria-label="Technology">
+            <li>Unity 6</li><li>HDRP</li><li>C#</li><li>Timeline</li><li>Blender</li><li>Python</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <h3 class="list-title">Built so far</h3>
+          <ul class="checklist">
+            <li>Full-body first-person character with traversal, held items and a flashlight</li>
+            <li>NPC behaviour architecture: routines, perception, stealth, guards and restricted areas</li>
+            <li>Story progression, dialogue, Timeline cutscenes and tutorials</li>
+            <li>Inventory, interaction, locks, readables and maps</li>
+            <li>Time of day, weather and lighting driven by the story</li>
+            <li>Saving, checkpoints and covered scene loading</li>
+            <li>A MetaHuman to Unity character pipeline and custom editor tooling</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="notice reveal">
+        <strong>Pre-alpha.</strong> Everything shown here is work in progress. Systems, art and lighting
+        are still changing, and none of it represents the final game.
+      </p>
+
+      <h3 class="subhead subhead--shots reveal">Episode One · Springdale</h3>
+      <ul class="gallery gallery--lead reveal" aria-label="Screenshots from Episode One, in Springdale">
+        <li><a class="shot" href="assets/img/springdale/roadblock-lights.webp" data-caption="Springdale · The roadblock, cruiser lights on (staged in the editor)">
+          <img src="assets/img/springdale/roadblock-lights-thumb.webp" alt="Sheriff's cruisers with red and blue lights behind a ROAD CLOSED barricade on a wet road at night" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Roadblock · Cruiser lights</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/roadblock-talk.webp" data-caption="Gameplay · The deputies at the roadblock">
+          <img src="assets/img/springdale/roadblock-talk-thumb.webp" alt="First-person view of two deputies in front of floodlights, with a line of dialogue on screen: Sir, you have to come with us. Now." width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Gameplay · Dialogue</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/roadblock-batons.webp" data-caption="Gameplay · Surrounded at the roadblock: objectives, health and stamina">
+          <img src="assets/img/springdale/roadblock-batons-thumb.webp" alt="Three deputies closing in with batons, with the objective list and health and stamina bars on screen" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Gameplay · Surrounded</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/woods-callout.webp" data-caption="Gameplay · Escaping into the woods">
+          <img src="assets/img/springdale/woods-callout-thumb.webp" alt="A lamp-lit forest trail at night with a subtitle from a deputy: Let him go. He won't survive the woods at night anyway." width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Gameplay · Into the woods</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/woods-inspect.webp" data-caption="Gameplay · Inspecting a found pistol">
+          <img src="assets/img/springdale/woods-inspect-thumb.webp" alt="An inspection screen showing a pistol on a picnic table, with its description and rotate and zoom controls" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Gameplay · Item inspection</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/woods-lock.webp" data-caption="Gameplay · Combination lock on a key box">
+          <img src="assets/img/springdale/woods-lock-thumb.webp" alt="A close-up of a brass combination padlock on a red metal box, with on-screen controls for choosing and turning the dials" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Gameplay · Combination lock</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/motel-arrival.webp" data-caption="Gameplay · Reaching the North Star Motel">
+          <img src="assets/img/springdale/motel-arrival-thumb.webp" alt="First-person view with a pistol in hand, approaching the neon sign of the North Star Motel at night, with a new objective on screen" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Gameplay · Reaching the motel</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/motel-sign-dusk.webp" data-caption="Springdale · North Star Motel, dusk">
+          <img src="assets/img/springdale/motel-sign-dusk-thumb.webp" alt="The neon sign of the North Star Motel glowing at dusk among autumn trees" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">North Star Motel · Dusk</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/motel-front.webp" data-caption="Springdale · North Star Motel, reception at dusk">
+          <img src="assets/img/springdale/motel-front-thumb.webp" alt="A two-storey motel with a reception office and a parked car under a violet evening sky" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">North Star Motel · Reception</span></a></li>
+      </ul>
+
+      <h3 class="subhead subhead--shots reveal">Prologue · New York</h3>
+      <figure class="tod reveal" data-tod>
+        <div class="tod__stage">
+          <img class="tod__img is-active" src="assets/img/springdale/tod-living-18.webp"
+               alt="Springdale: the apartment living room at 18:00, captured in-engine"
+               width="1600" height="900" loading="lazy" decoding="async">
+          <div class="tod__hud">
+            <span class="tod__clock">18:00</span>
+            <span class="tod__label">Apartment 5C · Living room</span>
+          </div>
+          <span class="tod__flag">Pre-alpha · Work in progress</span>
+        </div>
+
+        <div class="tod__controls">
+          <div class="seg" role="group" aria-label="Scene">
+            <button class="seg__btn" type="button" data-scene="living" aria-pressed="true">Living room</button>
+            <button class="seg__btn" type="button" data-scene="street" aria-pressed="false">Street view</button>
+          </div>
+          <button class="tod__play" type="button" aria-label="Play through the day" aria-pressed="false">
+            <svg class="icon icon--play" aria-hidden="true"><use href="#i-play"/></svg>
+            <svg class="icon icon--pause" aria-hidden="true"><use href="#i-pause"/></svg>
+          </button>
+          <div class="tod__slider">
+            <input class="tod__range" type="range" min="0" max="5" step="1" value="3"
+                   aria-label="Time of day" aria-valuetext="18:00">
+            <div class="tod__ticks" aria-hidden="true">
+              <button type="button" tabindex="-1" data-i="0">07:00</button>
+              <button type="button" tabindex="-1" data-i="1">13:00</button>
+              <button type="button" tabindex="-1" data-i="2">17:00</button>
+              <button type="button" tabindex="-1" data-i="3">18:00</button>
+              <button type="button" tabindex="-1" data-i="4">19:00</button>
+              <button type="button" tabindex="-1" data-i="5">23:00</button>
+            </div>
+          </div>
+        </div>
+
+        <figcaption>
+          <span class="js-only">Drag the slider to move through the day.</span>
+          Same camera, six times of day, in the game's New York prologue. Every image in this section is a pre-alpha, in-engine capture.
+        </figcaption>
+      </figure>
+
+      <ul class="gallery gallery--lead reveal" aria-label="Screenshots from the New York prologue">
+        <li><a class="shot" href="assets/img/springdale/pub-room.webp" data-caption="New York · The Thirsty Turtle">
+          <img src="assets/img/springdale/pub-room-thumb.webp" alt="A neighbourhood pub with a long bar, globe lamps, a tin ceiling and a tiled floor" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">The Thirsty Turtle · Pub</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/metro-train.webp" data-caption="New York · Metro, train at the platform">
+          <img src="assets/img/springdale/metro-train-thumb.webp" alt="A subway train standing at a dim, tiled platform" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Metro · Train at the platform</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/store-aisle.webp" data-caption="New York · Kovac Electronics &amp; Repair, shop floor">
+          <img src="assets/img/springdale/store-aisle-thumb.webp" alt="An electronics store aisle between metal shelves stacked with boxed parts, under fluorescent lights" width="800" height="450" loading="lazy" decoding="async">
+          <span class="shot__cap">Kovac Electronics · Shop floor</span></a></li>
+      </ul>
+
+      <h3 class="subhead subhead--shots reveal">Editor tooling</h3>
+      <p class="shots-note reveal">
+        <strong>Traversal Library</strong> is one of the editor tools I built for the project. Mark a ledge or a gap
+        in the Scene view and it infers the move (climb, drop, jump or vault), fits the animation to the
+        geometry, and checks clearance for the player and NPCs along the whole usable width. Nothing
+        touches the level until the draft is confirmed.
+      </p>
+      <ul class="gallery gallery--tools reveal" aria-label="Editor tooling screenshots">
+        <li><a class="shot" href="assets/img/springdale/tool-traversal-wide.webp" data-caption="Editor tooling · Traversal Library: a climb draft with its fit and clearance report">
+          <img src="assets/img/springdale/tool-traversal-wide-thumb.webp" alt="The Unity editor with a traversal draft in the Scene view: a marked ledge, allowed bounds and a preview skeleton mid-climb, next to the Traversal Library panel" width="1200" height="675" loading="lazy" decoding="async">
+          <span class="shot__cap">Traversal Library · Draft and panel</span></a></li>
+        <li><a class="shot" href="assets/img/springdale/tool-traversal-close.webp" data-caption="Editor tooling · Traversal Library: motion preview on a 2 m ledge">
+          <img src="assets/img/springdale/tool-traversal-close-thumb.webp" alt="Scene view close-up of the marked ledge section with green bounds and a wireframe skeleton previewing the climb" width="1200" height="675" loading="lazy" decoding="async">
+          <span class="shot__cap">Traversal Library · Motion preview</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Projects ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker"><b>04</b> Personal projects</p>
+        <h2>More things I'm building.</h2>
+        <p class="section__lede">
+          Most of my current repositories are private, but I'm happy to walk through any of them.
+          The older, public ones are linked below.
+        </p>
+      </div>
+
+      <h3 class="subhead reveal">Games in development</h3>
+      <div class="cards cards--2">
+        <article class="card reveal">
+          <div class="card__top"><span class="pill pill--amber">In production</span><span class="pill">Private</span></div>
+          <h4>Floor Fighters</h4>
+          <p>
+            A slapstick physics party brawler for PC. Wobbly active-ragdoll fighters rip tiles out of
+            the arena floor and throw them at each other: every throw costs you footing, and a miss
+            arms your opponent. Proven first as a browser prototype, now being built in Unity.
+          </p>
+          <ul class="tags"><li>Unity 6</li><li>URP</li><li>Physics</li><li>Multiplayer</li></ul>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top"><span class="pill pill--amber">In development</span><span class="pill">Private</span></div>
+          <h4>EscaPals</h4>
+          <p>
+            Co-operative escape rooms for phones. One to six friends each play on their own device,
+            with one device hosting authoritatively. The rules live in a pure C# package tested without
+            Unity, and rooms are plain data authored in a custom room editor. It began as a browser
+            prototype with a server-authoritative TypeScript engine before moving to Unity.
+          </p>
+          <ul class="tags"><li>Unity 6</li><li>UI Toolkit</li><li>Netcode</li><li>NUnit</li></ul>
+        </article>
+      </div>
+
+      <h3 class="subhead reveal">Tools &amp; pipelines</h3>
+      <div class="cards cards--2">
+        <article class="card reveal">
+          <div class="card__top"><span class="pill pill--live">Open source</span></div>
+          <h4>Live Game Data Editor</h4>
+          <p>
+            A Unity Editor extension for editing ScriptableObject-backed game data in a spreadsheet-style
+            table: typed rows, validation, Undo/Redo, multi-row editing, JSON and CSV import/export, and
+            Google Sheets sync. Built with UI Toolkit, with runtime and editor assemblies kept apart
+            so builds stay clean.
+          </p>
+          <ul class="tags"><li>Unity 2022.3+</li><li>UI Toolkit</li><li>Editor tooling</li><li>C#</li></ul>
+          <a class="card__link" href="https://github.com/marcell-lovassy/unity-live-gde" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span class="card__link-text">View on GitHub</span>
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#i-out"/></svg>
+          </a>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__top"><span class="pill pill--amber">In use</span><span class="pill">Private</span></div>
+          <h4>MetaHuman to Unity pipeline</h4>
+          <p>
+            Brings MetaHuman Creator characters into Unity HDRP in one click. Unreal export and bake
+            scripts, a Blender converter that merges meshes, simplifies the skeleton and builds LODs,
+            and a Unity importer that produces Humanoid prefabs with skin, eye and hair materials.
+            Built for Springdale.
+          </p>
+          <ul class="tags"><li>Python</li><li>Blender</li><li>Unreal Engine</li><li>Unity HDRP</li></ul>
+        </article>
+      </div>
+
+      <h3 class="subhead reveal">Earlier work on GitHub</h3>
+      <ul class="repos reveal">
+        <li><a href="https://github.com/marcell-lovassy/Roguelike" target="_blank" rel="noopener"><span>Top-down Roguelike</span><small>Unity</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/UNITY_TurnBasedStrategy" target="_blank" rel="noopener"><span>Turn-Based Strategy</span><small>Unity</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/Unity_RPG" target="_blank" rel="noopener"><span>Point &amp; Click RPG</span><small>Unity</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/2DDungeonCrawler" target="_blank" rel="noopener"><span>2D Dungeon Crawler</span><small>Unity</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/WaveFunctionCollapse_UNITY" target="_blank" rel="noopener"><span>Wave Function Collapse</span><small>Unity</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/ProceduralMazeGenerator" target="_blank" rel="noopener"><span>Procedural Maze Generator</span><small>Unity</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/OpenWorldGameProject" target="_blank" rel="noopener"><span>Open World Game Project</span><small>UE5 · C++</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/MultiplayerTPS" target="_blank" rel="noopener"><span>Multiplayer Third-Person Shooter</span><small>UE5</small></a></li>
+        <li><a href="https://github.com/marcell-lovassy/ProceduralAnimSystem" target="_blank" rel="noopener"><span>Procedural Animation System</span><small>UE5</small></a></li>
+      </ul>
+      <p class="more reveal">
+        <a class="card__link" href="https://github.com/marcell-lovassy?tab=repositories" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>All public repositories
+          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-out"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Skills ============ -->
+  <section class="section section--tight-top" id="skills">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="kicker"><b>05</b> Skills</p>
+        <h2>What I work with.</h2>
+      </div>
+
+      <div class="skills">
+        <div class="skill-group reveal">
+          <h3>Gameplay</h3>
+          <ul>
+            <li>Gameplay systems and mechanics</li>
+            <li>Player controllers and interaction</li>
+            <li>NPC behaviour and AI</li>
+            <li>Dialogue, story flow and cutscenes</li>
+            <li>Physics-driven gameplay</li>
+            <li>Save systems and game flow</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Tools &amp; pipeline</h3>
+          <ul>
+            <li>Unity Editor extensions</li>
+            <li>UI Toolkit</li>
+            <li>Data-driven design tooling</li>
+            <li>Asset and character pipelines</li>
+            <li>Automated tests and batch builds</li>
+            <li>Procedural generation</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Engines &amp; languages</h3>
+          <ul>
+            <li>Unity (HDRP, URP)</li>
+            <li>C# and .NET</li>
+            <li>Unreal Engine 5</li>
+            <li>C++</li>
+            <li>TypeScript</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Multiplayer &amp; backend</h3>
+          <ul>
+            <li>Host- and server-authoritative multiplayer</li>
+            <li>.NET services, Blazor</li>
+            <li>Node.js, Socket.IO</li>
+            <li>PostgreSQL</li>
+            <li>Mobile, PC and console targets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Contact ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact__box reveal">
+        <p class="kicker"><b>06</b> Contact</p>
+        <h2>Looking for a gameplay or tools programmer?</h2>
+        <p class="contact__text">
+          I'm happy to tell you more about my experience and projects, including a closer look at Springdale.
+        </p>
+        <a class="contact__mail" href="mailto:marcell.lovassy@gmail.com">marcell.lovassy@gmail.com</a>
+        <div class="contact__actions">
+          <a class="btn btn--primary" href="mailto:marcell.lovassy@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email me
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/marcell-lovassy" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub
+          </a>
+          <button class="btn btn--ghost js-only" type="button" data-print>
+            <svg class="icon" aria-hidden="true"><use href="#i-print"/></svg>Save as PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span data-year>2026</span> Marcell Lovassy · Budapest, Hungary</p>
+    <a class="footer__top" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<!-- Screenshot lightbox -->
+<dialog class="lightbox" aria-label="Screenshot viewer">
+  <div class="lightbox__inner">
+    <div class="lightbox__figure">
+      <img class="lightbox__img" src="" alt="">
+    </div>
+    <div class="lightbox__bar">
+      <span class="lightbox__caption"></span>
+      <span class="lightbox__meta"><span class="lightbox__flag">Pre-alpha</span><span class="lightbox__count"></span></span>
+    </div>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous screenshot">
+      <svg class="icon" aria-hidden="true"><use href="#i-left"/></svg>
+    </button>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Next screenshot">
+      <svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
+    </button>
+  </div>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
