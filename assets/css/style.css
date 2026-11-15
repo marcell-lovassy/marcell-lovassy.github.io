@@ -584,6 +584,28 @@ html:not(.js) .tod__controls { display: none; }
   color: var(--amber); font-weight: 500; font-size: .93rem; text-decoration: none; transition: color .2s;
 }
 .card__link:hover { color: var(--amber-hi); }
+.card--wide {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 48px); align-items: center;
+}
+.card__main { display: flex; flex-direction: column; gap: 14px; }
+.card p strong { color: var(--text); font-weight: 600; }
+.card__facts { border-left: 1px solid var(--line-soft); padding-left: clamp(20px, 3vw, 36px); }
+.card__facts div {
+  display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; align-items: baseline;
+  padding: 11px 0; border-bottom: 1px solid var(--line-soft);
+}
+.card__facts div:last-child { border-bottom: 0; }
+.card__facts dt {
+  font-family: var(--font-mono); font-size: .66rem; letter-spacing: .13em; text-transform: uppercase; color: var(--muted);
+}
+.card__facts dd { font-size: .97rem; color: var(--text-2); }
+.card__facts dd b { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; letter-spacing: -.01em; color: var(--amber); }
+@media (max-width: 760px) {
+  .card--wide { grid-template-columns: minmax(0, 1fr); }
+  .card__facts { border-left: 0; padding-left: 0; border-top: 1px solid var(--line-soft); padding-top: 4px; }
+}
 @media (max-width: 980px) { .cards { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 680px) { .cards, .cards--2 { grid-template-columns: 1fr; } }
 
@@ -731,27 +753,35 @@ html:not(.js) .tod__controls { display: none; }
   .tags--lg { margin-top: 8pt; }
   .tags li, .tags--lg li { font-size: 7pt; padding: 1pt 5pt; background: none; }
 
-  .subhead { margin: 10pt 0 5pt; font-size: 7pt; break-after: avoid; }
+  .subhead { margin: 8pt 0 4pt; font-size: 7pt; break-after: avoid; }
   .cards { grid-template-columns: repeat(3, 1fr); gap: 8pt; }
   .cards--2 { grid-template-columns: repeat(2, 1fr); }
-  .card { padding: 9pt; gap: 5pt; break-inside: avoid; }
+  .card { padding: 8pt 9pt; gap: 4pt; break-inside: avoid; }
   .card h4 { font-size: 11pt; }
   .card p { font-size: 8.5pt; line-height: 1.4; }
   .pill { font-size: 6pt; padding: 1pt 5pt; }
   .card__link { font-size: 7.5pt; }
   .card__link::after { content: "github.com/marcell-lovassy/unity-live-gde"; font-family: var(--font-mono); font-weight: 400; }
+  .card__link--itch::after { content: "sokama.itch.io/numero-gekko"; }
   .card__link .icon, .card__link-text { display: none; }
+  .card--wide { grid-template-columns: 1.7fr 1fr; gap: 14pt; }
+  .card__main { gap: 4pt; }
+  .card__facts { padding-left: 12pt; }
+  .card__facts div { grid-template-columns: 50pt 1fr; gap: 6pt; padding: 2.5pt 0; }
+  .card__facts dt { font-size: 6.5pt; }
+  .card__facts dd { font-size: 8.5pt; }
+  .card__facts dd b { font-size: 10pt; }
   .repos { grid-template-columns: repeat(3, 1fr); gap: 0 14pt; }
-  .repos a { padding: 3.5pt 0; font-size: 9pt; }
+  .repos a { padding: 3pt 0; font-size: 9pt; }
   .repos a small { font-size: 6.5pt; }
 
   .skills { grid-template-columns: repeat(4, 1fr); gap: 12pt; break-inside: avoid; }
   .skill-group { padding-top: 6pt; border-top-width: 1.5pt; }
   .skill-group h3 { font-size: 10pt; margin-bottom: 3pt; }
-  .skill-group li { padding: 2.5pt 0; font-size: 8.5pt; }
+  .skill-group li { padding: 2pt 0; font-size: 8.5pt; }
 
-  .contact { margin-top: 14pt; }
-  .contact__box { padding: 10pt 14pt; background: none; break-inside: avoid; }
+  .contact { margin-top: 10pt; }
+  .contact__box { padding: 8pt 14pt; background: none; break-inside: avoid; }
   .contact h2 { max-width: none; }
   .contact__text { margin-top: 5pt; font-size: 10pt; max-width: none; }
   .contact__mail { margin-top: 8pt; font-size: 13pt; }
@@ -760,5 +790,5 @@ html:not(.js) .tod__controls { display: none; }
     display: block; margin-top: 4pt; font-family: var(--font-mono); font-size: 8pt; color: var(--muted);
   }
   .footer { border: 0; }
-  .footer__inner { padding-block: 10pt 0; font-size: 7pt; }
+  .footer__inner { padding-block: 6pt 0; font-size: 7pt; }
 }
