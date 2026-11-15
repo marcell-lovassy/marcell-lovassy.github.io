@@ -665,7 +665,7 @@ html:not(.js) .tod__controls { display: none; }
   }
   @page { size: A4; margin: 13mm 14mm; }
   html { scroll-behavior: auto; }
-  body { font-size: 9.5pt; line-height: 1.42; background: #fff; }
+  body { font-size: 9.3pt; line-height: 1.4; background: #fff; }
   .container { width: 100%; }
 
   .nav, .skip, .hero__media, .hero::before, .hero__cta, .hero__credit,
@@ -674,22 +674,22 @@ html:not(.js) .tod__controls { display: none; }
   .js .reveal { opacity: 1 !important; transform: none !important; }
   a { text-decoration: none; }
 
-  .hero { min-height: 0; padding: 0 0 10pt; display: block; }
+  .hero { min-height: 0; padding: 0 0 8pt; display: block; }
   .eyebrow { font-size: 7.5pt; }
-  .hero__name { font-size: 30pt; margin: 6pt 0 8pt; line-height: 1; }
+  .hero__name { font-size: 30pt; margin: 4pt 0 6pt; line-height: 1; }
   .hero__name br { display: none; }
   .hero__lead { max-width: none; font-size: 10.5pt; }
-  .stats { margin-top: 10pt; gap: 10pt 28pt; }
+  .stats { margin-top: 8pt; gap: 8pt 28pt; }
   .stats dt { font-size: 15pt; }
   .stats dd { font-size: 6.5pt; margin-top: 3pt; }
 
   .credits { border: 0; border-block: 1px solid var(--line); }
-  .credits__inner { grid-template-columns: auto repeat(2, auto); padding-block: 8pt; gap: 6pt 28pt; }
+  .credits__inner { grid-template-columns: auto repeat(2, auto); padding-block: 6pt; gap: 6pt 28pt; }
   .credit strong { font-size: 10.5pt; }
   .credit span, .credits__label { font-size: 7.5pt; }
 
-  .section { padding-block: 0; margin-top: 13pt; }
-  .section__head { margin-bottom: 6pt; max-width: none; break-after: avoid; }
+  .section { padding-block: 0; margin-top: 11pt; }
+  .section__head { margin-bottom: 5pt; max-width: none; break-after: avoid; }
   .kicker { font-size: 7pt; margin-bottom: 3pt; }
   h2 { font-size: 13.5pt; break-after: avoid; }
   .section__sub { font-size: 7pt; margin-top: 4pt; gap: 6pt; }
@@ -697,25 +697,25 @@ html:not(.js) .tod__controls { display: none; }
   .notice { margin-top: 8pt; padding: 5pt 9pt; font-size: 8.5pt; background: none; break-inside: avoid; }
   .notice strong { font-size: 7pt; }
   .section__lede { margin-top: 4pt; max-width: none; }
-  .prose { font-size: 9.5pt; line-height: 1.42; }
+  .prose { font-size: 9.3pt; line-height: 1.4; }
   .prose p + p { margin-top: .6em; }
 
   .about { grid-template-columns: 1.5fr 1fr; gap: 18pt; }
   .facts { padding: 0 10pt; }
-  .facts div { grid-template-columns: 62pt 1fr; padding: 4.5pt 0; gap: 8pt; }
+  .facts div { grid-template-columns: 62pt 1fr; padding: 3.8pt 0; gap: 8pt; }
   .facts dt { font-size: 6.5pt; padding-top: 2pt; }
   .facts dd { font-size: 9pt; }
 
-  .job { grid-template-columns: 82pt 1fr; padding: 6.5pt 0; gap: 4pt 14pt; break-inside: avoid; }
+  .job { grid-template-columns: 82pt 1fr; padding: 5.5pt 0; gap: 4pt 14pt; break-inside: avoid; }
   .job--edu { padding: 5pt 0; }
   .job__span { font-size: 8.5pt; padding-top: 2pt; }
   .job__where { font-size: 6.5pt; margin-top: 3pt; }
   .job__company { font-size: 12pt; }
   .job--edu .job__company { font-size: 10.5pt; }
-  .job__desc { margin-top: 4pt; max-width: none; }
-  .job__note { margin-top: 4pt; max-width: none; font-size: 8pt; color: #555; }
-  .titles { margin-top: 6pt; gap: 6pt; grid-template-columns: repeat(2, 1fr); max-width: none; }
-  .title-card { padding: 5pt 8pt 5pt 11pt; }
+  .job__desc { margin-top: 3pt; max-width: none; }
+  .job__note { margin-top: 3pt; max-width: none; font-size: 8pt; color: #555; }
+  .titles { margin-top: 5pt; gap: 6pt; grid-template-columns: repeat(2, 1fr); max-width: none; }
+  .title-card { padding: 4pt 8pt 4pt 11pt; }
   .title-card span { font-size: 6.5pt; margin-top: 1pt; }
   .store-links { margin-top: 2pt; gap: 1pt 10pt; }
   .store-links--inline { margin: 0 0 0 8pt; }
