@@ -170,10 +170,12 @@ html:not(.js) .js-only { display: none !important; }
   color: var(--amber);
 }
 .eyebrow__sep { color: var(--muted); }
+.hero__surname { white-space: nowrap; }
 .hero__name {
   margin: 22px 0 28px;
   font-family: var(--font-display); font-weight: 800;
-  font-size: clamp(3.5rem, 10.5vw, 8rem); line-height: .9; letter-spacing: -.035em;
+  /* The floor shrinks on very narrow phones so the unbroken surname still fits. */
+  font-size: clamp(min(3.5rem, calc(17vw - 8px)), 10.5vw, 8rem); line-height: .9; letter-spacing: -.035em;
 }
 .hero__lead {
   max-width: 35rem;
