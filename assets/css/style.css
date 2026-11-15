@@ -244,8 +244,17 @@ html:not(.js) .js-only { display: none !important; }
   display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.18rem; letter-spacing: -.01em; line-height: 1.25;
 }
 .credit span { font-size: .86rem; color: var(--muted); }
+.store-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 10px; }
+.store-links a {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--font-body, inherit); font-size: .84rem; font-weight: 500; letter-spacing: 0; text-transform: none;
+  color: var(--amber); transition: color .2s;
+}
+.store-links a:hover, .store-links a:focus-visible { color: var(--amber-hi); }
+.store-links--inline { display: inline-flex; margin: 0 0 0 14px; }
 @media (max-width: 820px) {
   .credits__inner { grid-template-columns: 1fr; gap: 14px; }
+  .store-links--inline { display: flex; margin: 6px 0 0; }
 }
 
 /* ---------- Sections ---------- */
@@ -708,6 +717,10 @@ html:not(.js) .tod__controls { display: none; }
   .titles { margin-top: 6pt; gap: 6pt; grid-template-columns: repeat(2, 1fr); max-width: none; }
   .title-card { padding: 5pt 8pt 5pt 11pt; }
   .title-card span { font-size: 6.5pt; margin-top: 1pt; }
+  .store-links { margin-top: 2pt; gap: 1pt 10pt; }
+  .store-links--inline { margin: 0 0 0 8pt; }
+  .store-links a { font-size: 7.5pt; }
+  .store-links .icon { display: none; }
 
   .feature { background: none; border: 0; }
   .feature__intro { grid-template-columns: 1.2fr 1fr; gap: 18pt; }
